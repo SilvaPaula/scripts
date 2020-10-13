@@ -38,7 +38,7 @@ dim(myG) # check dimension of data
 myGAPIT <- GAPIT(Y = myY, G = myG, PCA.total = 0)
 
 
-### Read kinship and principla components (these two files are saved on the your working directory)
+### Read kinship and principal components (these two files are saved on your working directory)
 myKI <- read.csv('GAPIT.Kin.VanRaden.csv', head = F) # kinship matrix
 myCV <- read.csv('GAPIT.PCA.csv', head = T) # principal components
 
@@ -51,12 +51,12 @@ myGAPIT <- GAPIT(Y = myY, G = myG, KI = myKI, CV = myCV)
 
 #### Re-do Manhattan plots
 
-### load CMplot libraries
+### load CMplot library
 library(CMplot)
 library(tidyverse)
 
 
-## Read GWAS results (this file is saved on the your working directory)
+## Read GWAS results (this file is saved on your working directory)
 ## The name of the file has the name of the phenotype (LR_IC2019)
 mhtplot <- read.csv('GAPIT.MLM.LR_IC2019.GWAS.Results.csv', header = T, check.names = F)
 
