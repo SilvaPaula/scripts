@@ -78,7 +78,7 @@ mhtplot$Chromosome <- recode(mhtplot$Chromosome, !!!level_key)
 ### Run the function and get the Manhattan plot
 ### many options to adjust colors and visuals (https://github.com/YinLiLin/CMplot)
 
-bonferroni <- 0.05/nrow(mhtplot) # set your threshold 
+bonferroni <- 0.01/nrow(mhtplot) # set your threshold 
 
 CMplot(mhtplot, plot.type = "m", col = c('gray30','gray50','gray80'), 
        cex.axis = 1, cex.lab = 2, pch = 1, LOG10 = T, threshold = bonferroni, 
